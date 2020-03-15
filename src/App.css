@@ -1,38 +1,120 @@
 .App {
   text-align: center;
+  transition: 0.5s ease;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  background-color: #ffa500;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn:hover {
+  color: #ffa500;
+  box-shadow: none;
+}
+
+.btn-icon {
+  padding-left: 10px;
+  font-size: 26px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 10px;;
+}
+
+.item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-sizing: border-box;
+  border : 1px solid #d6d4d4;
+  padding: 10px;
+  margin: 30px;
+  transition: 0.5s ease
 }
 
-.App-link {
-  color: #61dafb;
+.item:hover {
+  position: relative;
+  z-index: 2;
+  padding: 15px;
+  transition: 0.5s ease;
+  border: 0;
+  box-shadow: 
+       inset 0 -3em 3em rgb(255,255,255), 
+             0 2px rgba(243, 161, 8, 0.767),
+             0.3em 0.3em 1em rgba(223, 146, 4, 0.582);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info {
+    flex: 1 1 auto;
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.info .expense{
+  flex: 1;
+  text-align: justify;
+  text-transform: capitalize;
+}
+
+.info .amount{
+  flex: 1;
+  text-align: justify;
+}
+
+.item btn {
+  justify-self: flex-end;
+}
+
+.form-inline {
+  justify-content: space-around;
+}
+
+.form-inline .form-control {
+  border: 0;
+  outline: 0;
+  width: 500px;
+  border-bottom: 1px solid #918f8f;
+  border-radius: 0;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-bottom:  2px solid rgba(223, 146, 4, 0.842);
+  transition: 0.5s ease;
+}
+
+.form-group {
+  padding: 30px;
+  width: 500px;
+}
+
+.form-group label {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.edit-btn {
+  border: 0;
+  background-color: transparent;
+  color: #15cf15;
+  font-size: 20px;
+}
+
+.clear-btn {
+  border: 0;
+  background-color: transparent;
+  color: #ff0000;
+  font-size: 20px;
 }
